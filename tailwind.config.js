@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./dist/**/*.{html,js}"],
+  content: ["./docs/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -9,8 +9,14 @@ module.exports = {
         'line': '#3a3b3c',
       },
       animation: {
-        'fade-in': 'fadeup 2s linear 1'
-      }
+        'fade-in': '1s ease-in 1s 1 fadeup'
+      },
+      keyframes: {
+        fadeup: {
+          '0%': '{ position: relative; top: 50px; opacity: 0; }',
+          '100%': '{ position: relative; top: 0px; opacity: 1; }',
+        },
+      },
     },
   },
   plugins: [],
