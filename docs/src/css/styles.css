@@ -576,20 +576,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @-webkit-keyframes fadeup {
-  0%: { position: relative; top: 50px; opacity: 0; };
+  from: { position: relative; top: 50px; opacity: 0; };
 
-  100%: { position: relative; top: 0px; opacity: 1; };
+  to: { position: relative; top: 0px; opacity: 1; };
 }
 
 @keyframes fadeup {
-  0%: { position: relative; top: 50px; opacity: 0; };
+  from: { position: relative; top: 50px; opacity: 0; };
 
-  100%: { position: relative; top: 0px; opacity: 1; };
+  to: { position: relative; top: 0px; opacity: 1; };
 }
 
 .animate-fade-in {
-  -webkit-animation: 1s ease-in 1s 1 fadeup;
-          animation: 1s ease-in 1s 1 fadeup;
+  -webkit-animation: fadeup 2s;
+          animation: fadeup 2s;
 }
 
 .flex-col {

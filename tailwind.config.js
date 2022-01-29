@@ -9,12 +9,12 @@ module.exports = {
         'line': '#3a3b3c',
       },
       animation: {
-        'fade-in': '1s ease-in 1s 1 fadeup'
+        'fade-in': 'fadeup 2s'
       },
       keyframes: {
         fadeup: {
-          '0%': '{ position: relative; top: 50px; opacity: 0; }',
-          '100%': '{ position: relative; top: 0px; opacity: 1; }',
+          'from': '{ position: relative; top: 50px; opacity: 0; }',
+          'to': '{ position: relative; top: 0px; opacity: 1; }',
         },
       },
     },
