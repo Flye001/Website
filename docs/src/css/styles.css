@@ -665,8 +665,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-
 .russo-one {
   font-family: 'Russo One', sans-serif;
 }
