@@ -1,0 +1,61 @@
+@keyframes line {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 450px;
+    }
+  }
+
+  @keyframes text {
+    0% {
+      transform: translate(50px, 0);
+      opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes image {
+    0% {
+      transform: translate(-60px, 0) scale(.5);
+      opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(.5);
+        opacity: 1;
+    }
+  }
+
+  @keyframes buttons {
+    0% {
+      transform: translate(0, 60px);
+      opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+  }
+  
+.line {
+    animation: 0.5s ease-out 0s 1 line;
+}
+
+.text {
+    opacity: 0;
+    animation: 0.5s ease-out 0.5s 1 forwards text;
+}
+
+img {
+    opacity: 0;
+    transform: scale(.5, .5);
+    animation: 0.5s ease-out 0.5s 1 forwards image;
+}
+
+.buttons {
+    opacity: 0;
+    animation: 1s ease-out 1s 1 forwards buttons;
+}
