@@ -8,6 +8,9 @@ module.exports = {
         'secondary': '#b1b3b7',
         'line': '#3a3b3c',
       },
+      screens: {
+        'md': '920px',
+      },
       animation: {
         'fade-in': 'fadeup 2s'
       },
