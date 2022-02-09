@@ -10,6 +10,8 @@
     filter: drop-shadow(0px 0px 80px #fff);
 }
 
+/* Home Page */
+
 .icon-div {
     @apply m-5 text-center text-2xl cursor-pointer hover:text-slate-300;
 }
@@ -22,3 +24,16 @@
     @apply text-5xl mb-2;
 }
 
+/* Projects Page */
+
+.project-card {
+    @apply bg-card-bg flex-1 p-5 mx-5 text-center rounded-lg mt-5 min-w-[20rem] max-w-min flex flex-col justify-between cursor-pointer;
+}
+
+.project-card h1 {
+    @apply text-white text-3xl mt-3;
+}
+
+.project-card img {
+    @apply px-20 mx-auto object-contain aspect-auto;
+}
