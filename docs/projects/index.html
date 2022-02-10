@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/src/css/styles.css?version=2.1.1">
+    <!-- Use on server -->
+    <link rel="stylesheet" href="/src/css/styles.css?version=2.1.2">
+    <!-- Use for Local Testing -->
+    <!-- <link rel="stylesheet" href="/docs/src/css/styles.css?version=2.1.1">  -->
+
     <link rel="icon" href="/src/img/favicon.ico">
 
     <script src="https://kit.fontawesome.com/c26eb69760.js" crossorigin="anonymous"></script>
@@ -28,34 +32,107 @@
         <h1 class="text-primary text-5xl my-5 russo-one">Projects</h1>
 
         <div class="flex flex-row flex-wrap w-screen justify-center mb-5">
-            <div class="project-card" onclick="window.location.href = 'http://flyechat.com';">
+
+            <!-- FlyeChat -->
+            <div class="project-card" id="FlyeChatTitleCard" onclick="ShowCardInfo('FlyeChat')">
                 <img src="/src/img/FlyeChatLogo.png">
                 <h1>FlyeChat</h1>
             </div>
-            <div class="project-card" onclick="window.location.href = 'https://flye001.itch.io/turret-malfunction';">
+            <div class="project-info-card" id="FlyeChatInfoCard">
+                <div class="flex flex-row justify-between">
+                    <h1>FlyeChat</h1>
+                    <i class="fa-solid fa-x" onclick="HideCardInfo('FlyeChat')"></i>
+                </div>
+                <p>FlyeChat is a web-based, real time chat client, similar to Discord.</p>
+                <p>I originally started developing it at the start of 2021 in January, using Python with a client and server application, connected using the socketserver library. It worked quite well, even integrating Discord Rich Presence, however there was one major flaw: whenever I converted it to an exe for other people to try, Windows Defender would flag it as a virus.</p>
+                <p>It was this that ultimately drove me to make a web version. I firstly made a Python web version using Flask, however my HTML/CSS skills were not very good at this time. It was at this point NewGuitarWhoDis joined the project. Ever since, he has been responsible for making the great designs for FlyeChat. The Flask web version worked fairly well, but I felt limited by Python and wanted to try something new.</p>
+                <p>At this point, I decided to learn Microsoft's Asp.Net. I remade the whole system from scratch using Asp.Net, and it turned out pretty well.</p>
+                <p>However in December 2021, I decided I again wanted to recreate FlyeChat with a whole new design and feature set - which is now the current version of FlyeChat. For the first time, FlyeChat now wasn't just a texting platform, it now had voice chats with screensharing.</p>
+                <p>This latest version is nearly ready and ready to be released, but for now:</p>
+                <p>You can access the old version here: <a class="font-bold" target="_blank" href="https://flyechat.com">https://FlyeChat.com</a></p>
+            </div>
+
+            <!-- Turret Malfunction -->
+            <div class="project-card" id="TurretMalfunctionTitleCard" onclick="ShowCardInfo('TurretMalfunction')">
                 <img src="/src/img/TurretMalfunctionLogo.png" class="rounded-[50%]">
                 <h1>Turret Malfunction</h1>
             </div>
-            <div class="project-card" onclick="window.location.href = 'https://flyewords.flye001.com';">
+            <div class="project-info-card" id="TurretMalfunctionInfoCard">
+                <div class="flex flex-row justify-between">
+                    <h1>Turret Malfunction</h1>
+                    <i class="fa-solid fa-x" onclick="HideCardInfo('TurretMalfunction')"></i>
+                </div>
+                <p>Turret Malfunction is a browser game I made with Unity for the GMTK Game Jam 2020 during lockdown, in collaberation with SirHorseIV (he designed the artwork).</p>
+                <p>You can play it here: <a class="font-bold" target="_blank" href="https://flye001.itch.io/turret-malfunction">https://flye001.itch.io/turret-malfunction</a></p>
+            </div>
+
+            <!-- FlyeWords -->
+            <div class="project-card" id="FlyeWordsTitleCard" onclick="ShowCardInfo('FlyeWords')">
                 <img src="/src/img/LogoWhite.png">
                 <h1>FlyeWords</h1>
             </div>
-            <div class="project-card" onclick="window.location.href = 'https://tracker.flye001.com';">
+            <div class="project-info-card" id="FlyeWordsInfoCard">
+                <div class="flex flex-row justify-between">
+                    <h1>FlyeWords</h1>
+                    <i class="fa-solid fa-x" onclick="HideCardInfo('FlyeWords')"></i>
+                </div>
+                <p>FlyeWords is a simple word game influenced by the popular game Wordle.</p>
+                <p>I made it for fun to improve my desiging skills (so please don't sue me people that made Wordle).</p>
+                <p>You can play FlyeWords here: <a class="font-bold" target="_blank" href="https://flyewords.flye001.com">https://flyewords.flye001.com</a></p>
+            </div>
+
+            <!-- ETS2/ATS Trackers -->
+            <div class="project-card" id="ETS2TitleCard" onclick="ShowCardInfo('ETS2')">
                 <img src="/src/img/ETS2Logo.png">
                 <h1>ETS2/ATS Trackers</h1>
             </div>
-            <div class="project-card" onclick="window.location.href = 'https://discord.gg/FvvYGCjJdk';">
+            <div class="project-info-card" id="ETS2InfoCard">
+                <div class="flex flex-row justify-between">
+                    <h1>ETS2/ATS Trackers</h1>
+                    <i class="fa-solid fa-x" onclick="HideCardInfo('ETS2')"></i>
+                </div>
+                <p>FlyeTracker is a system to log your deliveries in the games Euro Truck Simulator 2 & American Truck Simulator. There is a downloadable tracker software which connects to the games and logs and sends your deliveries to the server. You can then view all your deliveries online in the web application.</p>
+                <p>I have also made several custom Drivers Hubs with trackers for VTCs.</p>
+                <p>You can FlyeTracker here: <a class="font-bold" target="_blank" href="https://tracker.flye001.com">https://tracker.flye001.com</a></p>
+            </div>
+
+            <!-- Discord Bots -->
+            <div class="project-card" id="DiscordTitleCard" onclick="ShowCardInfo('Discord')">
                 <img src="/src/img/DiscordLogo.png">
                 <h1>Discord Bots</h1>
             </div>
-            <div class="project-card" onclick="window.location.href = 'https://discord.com/channels/805089786691584050/911326416522600529';">
+            <div class="project-info-card" id="DiscordInfoCard">
+                <div class="flex flex-row justify-between">
+                    <h1>Discord Bots</h1>
+                    <i class="fa-solid fa-x" onclick="HideCardInfo('Discord')"></i>
+                </div>
+                <p>I have made several Discord bots before in several languages, including Python and C#; some just for fun and my own use, and some for other people to buy. If you would be interested in getting a custom Discord bot for your server, feel free to message me on Discord.</p>
+                <p>You can join my Discord server here: <a class="font-bold" target="_blank" href="https://discord.gg/FvvYGCjJdk">https://discord.gg/FvvYGCjJdk</a></p>
+            </div>
+
+            <!-- Pokedex -->
+            <div class="project-card" id="PokedexTitleCard" onclick="ShowCardInfo('Pokedex')">
                 <img src="https://cdn.discordapp.com/attachments/911326416522600529/911336908620177489/unknown.png" class="rounded-[50%]">
                 <h1>Pokedex</h1>
             </div>
+            <div class="project-info-card" id="PokedexInfoCard">
+                <div class="flex flex-row justify-between">
+                    <h1>Pokedex</h1>
+                    <i class="fa-solid fa-x" onclick="HideCardInfo('Pokedex')"></i>
+                </div>
+                <p>In June 2016, I embarked on my first ever real journey into development. I decided to make a real life Pokedex, powered by a Raspberry Pi.</p>
+                <p>The project turned out to be a great success, and I have made improved versions since.</p>
+                <p>If you'd like to find out more about them, there is channel in my Discord Server detailing the whole journey.</p>
+                <p>You can access that channel with <a class="font-bold" target="_blank" href="https://discord.com/channels/805089786691584050/911326416522600529">this link</a>.</p>
+            </div>
+
         </div>
 
     </div>
 
 </body>
+
+<script src="src/js/projects.js"></script>
+<!-- <script src="/docs/src/js/projects.js"></script> -->
 
 </html>

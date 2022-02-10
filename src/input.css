@@ -41,3 +41,19 @@
 .project-card img {
     @apply px-20 mx-auto object-contain aspect-auto;
 }
+
+.project-info-card {
+    @apply hidden bg-card-bg russo-one text-white flex-1 p-3 mx-5 text-left rounded-lg mt-5 min-w-[20rem] max-w-min flex-col justify-between;
+}
+
+.project-info-card h1 {
+    @apply text-xl;
+}
+
+.project-info-card p {
+    @apply roboto text-sm mt-2;
+}
+
+.project-info-card i {
+    @apply cursor-pointer;
+}
